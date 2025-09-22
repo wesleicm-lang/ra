@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de RA - Fazenda</title>
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+    <style>
+        /* Estilo para garantir que o visualizador ocupe a tela inteira */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            --ar-button-display: block; /* Garante que o botão de RA seja exibido */
+        }
+    </style>
+</head>
+<body>
+
+    <model-viewer 
+        src="Farm.glb" 
+        alt="Um modelo 3D de uma fazenda"
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate>
+    </model-viewer>
+
+</body>
+</html>
